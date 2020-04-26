@@ -5,7 +5,7 @@
   become_method: sudo       
   remote_user: root         
   vars:
-    tomcat_ver: 9.0.30                          # Tomcat version to install
+    tomcat_ver: 9.0.34                          # Tomcat version to install
     ui_manager_user: manager                    # User who can access the UI manager section only
     ui_manager_pass: redhat      # UI manager user password
     ui_admin_username: admin                    # User who can access bpth manager and admin UI sections
