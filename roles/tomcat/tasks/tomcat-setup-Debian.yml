@@ -15,12 +15,24 @@
     name: ['vim','aptitude','bash-completion','tmux','tree','htop','wget','unzip','curl','git']
     state: present
     update_cache: yes
-
+  
 - name: Install Default Java (Debian/Ubuntu)
   apt:
     name: default-jdk
     state: present
+  
+- name: Create bash_profile to set JAVA_HOME variable
+  file:
+    path: /root/.bash_profile
+    owner: root
+    group: root
+    mode: 0644
 
+- name: Insert export line to bash_profile and make changes
+  shell: |
+    echo 'export JAVA_HOME={{ JAVA_HOME }}' > /root/.bash_profile
+    source /root/.bash_profile
+    
 - name: Add tomcat group
   group:
     name: tomcat
