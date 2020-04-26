@@ -3,7 +3,7 @@
   hosts: tomcat_nodes       
   become: yes               
   become_method: sudo       
-  remote_user: root         
+  remote_user: vagrant         
   vars:
     tomcat_ver: 9.0.34                          # Tomcat version to install
     ui_manager_user: manager                    # User who can access the UI manager section only
