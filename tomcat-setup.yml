@@ -1,6 +1,6 @@
 ---
 - name: Tomcat version 10 deployment on Debian buster
-  hosts: tomcat-nodes       
+  hosts: tomcat_nodes       
   become: yes               
   become_method: sudo       
   remote_user: root         
